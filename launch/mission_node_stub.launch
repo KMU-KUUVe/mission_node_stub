@@ -1,0 +1,22 @@
+<launch>
+	<node pkg="mission_node_stub" type="sign_node_stub.py" name="darknet_ros_light" output="screen">
+		<param name="box_class" type="str" value="Go"/>
+		<param name="box_probability" type="double" value="80.0"/>
+	</node>
+
+	<node pkg="mission_node_stub" type="mission_node_stub.py" name="narrow_path" output="screen"/>
+
+	<node pkg="mission_node_stub" type="mission_node_stub" name="lane_detector" output="screen" args="lane_detector"/>
+
+	<node pkg="mission_node_stub" type="mission_node_stub.py" name="u_turn_and_crosswalk_stop" output="screen"/>
+
+	<node pkg="mission_node_stub" type="mission_node_stub.py" name="car_traking" output="screen"/>
+
+	<node pkg="mission_node_stub" type="sign_node_stub.py" name="darknet_ros_ab" output="screen">
+		<param name="box_class" type="str" value="Parking_a"/>
+		<param name="box_probability" type="double" value="80.0"/>
+	</node>
+
+	<node pkg="mission_node_stub" type="mission_node_stub" name="parking" output="screen" args="parking"/>
+
+</launch>
