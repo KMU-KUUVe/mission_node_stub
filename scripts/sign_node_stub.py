@@ -24,7 +24,7 @@ class SignNodeStub:
 
 		rospy.sleep(1.)		# sleep for 1 sec
 
-		self._result.bounding_boxes.bounding_boxes[0] = bounding_box
+		self._result.bounding_boxes.bounding_boxes.append(bounding_box)
 		rospy.loginfo('%s: send return!' % self._action_name)
 		rospy.loginfo('-------------------------------')
 		self._as.set_succeeded(self._result)
