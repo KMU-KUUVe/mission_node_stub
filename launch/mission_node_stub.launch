@@ -10,7 +10,7 @@
 
 	<node pkg="mission_node_stub" type="mission_node_stub.py" name="u_turn_and_crosswalk_stop" output="screen"/>
 
-	<node pkg="mission_node_stub" type="mission_node_stub.py" name="car_traking" output="screen"/>
+	<node pkg="mission_node_stub" type="mission_node_stub.py" name="car_tracking" output="screen"/>
 
 	<node pkg="mission_node_stub" type="sign_node_stub.py" name="darknet_ros_ab" output="screen">
 		<param name="box_class" type="str" value="Parking_a"/>

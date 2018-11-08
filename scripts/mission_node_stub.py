@@ -4,6 +4,8 @@ import actionlib
 from mission_planner.msg import MissionPlannerAction, MissionPlannerGoal, MissionPlannerResult, MissionPlannerFeedback
 
 class MissionNodeStub:
+    _result = MissionPlannerResult()
+
     def __init__(self):
         self._action_name = rospy.get_name()
         self._as = actionlib.SimpleActionServer(self._action_name, MissionPlannerAction, execute_cb=self.actionCallback, auto_start = False)
@@ -13,7 +15,7 @@ class MissionNodeStub:
     def actionCallback(self, goal):
         rospy.loginfo("%s, actionCallback called!" % self._action_name)
 
-        rospy.sleep(1.)		# sleep for 1 sec
+        rospy.sleep(3.)		# sleep for 1 sec
 
         rospy.loginfo('%s: send return!' % self._action_name)
         rospy.loginfo('-------------------------------')
