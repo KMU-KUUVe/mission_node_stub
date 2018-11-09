@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
-  darknet_ros_msgs
+  #darknet_ros_msgs
   state_cpp_msg
 )
 
